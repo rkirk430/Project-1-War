@@ -1,3 +1,9 @@
+
+//Empty arrays for players
+
+let player1 = []
+let player2 = []
+
 // Card Deck = Array of Objects
 
 let cardDeck = [
@@ -51,5 +57,10 @@ let cardDeck = [
     },
 ]
 
+console.log(cardDeck[0].name + ' '+ cardDeck[0].suite);
+
+player1.push(cardDeck[0].name + ' ' + cardDeck[0].suite);
+
+console.log(player1);
 
 
