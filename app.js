@@ -59,8 +59,17 @@ let cardDeck = [
 
 console.log(cardDeck[0].name + ' '+ cardDeck[0].suite);
 
+
+//Push card from array to player1
+
 player1.push(cardDeck[0].name + ' ' + cardDeck[0].suite);
 
 console.log(player1);
+
+//Push card from array to player2
+
+player2.push(cardDeck[1].name + ' ' + cardDeck[1].suite);
+
+console.log(player2);
 
 
