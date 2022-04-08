@@ -65,7 +65,10 @@ let cardDeck = [
     },
 ]
 
-console.log(cardDeck[0].name + ' '+ cardDeck[0].suite);
+//Randomly separate cards via random number (ie const randArrayP1 and randArrayP2 = new cardDeck?)
+class randArrayP1 {}
+
+console.log(cardDeck[0].name + ' '+ cardDeck[0].suite);  // Pulls Card
 
 
 //Push card from array to player1
