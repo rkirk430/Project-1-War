@@ -8,62 +8,64 @@ let player2 = []
 
 let cardDeck = [
     {
-        name: 'Ace',
+        name: 'A',
         suite: 'spades',
         number: 14,
         image: '',
         randnumber: 1,
     },
     {
-        name: 'Ace',
+        name: 'A',
         suite: 'hearts',
         number: 14,
         image: '',
         randnumber: 2,
     },
     {
-        name: 'Ace',
+        name: 'A',
         suite: 'diamonds',
         number: 14,
         image: '',
         randnumber: 3,
     },
     {
-        name: 'Ace',
+        name: 'A',
         suite: 'clubs',
         number: 14,
         image: '',
         randnumber: 4,
     },
     {
-        name: 'two',
+        name: '2',
         suite: 'spades',
         number: 2,
         image: '',
         randnumber: 5,
     },
     {
-        name: 'two',
+        name: '2',
         suite: 'hearts',
         number: 2,
         image: '',
         randnumber: 6,
     },
     {
-        name: 'two',
+        name: '2',
         suite: 'diamonds',
         number: 2,
         image: '',
         randnumber: 7,
     },
     {
-        name: 'two',
+        name: '2',
         suite: 'clubs',
         number: 2,
         image: '',
         randnumber: 8,
     },
 ]
+
+// console.log(cardDeck);
 
 
 //Randomly separate cards via random number (ie const randArrayP1 and randArrayP2 = new cardDeck?)
@@ -82,25 +84,25 @@ shuffle(cardDeck)
 console.log(cardDeck);
 
 
-class randArrayP1 {}
+// class randArrayP1 {}
 
-console.log(cardDeck[0].name + ' '+ cardDeck[0].suite);  // Pulls Card
+// console.log(cardDeck[0].name + ' '+ cardDeck[0].suite);  // Pulls Card
 
 
 //Push card from array to player1
 
-player1.push(cardDeck[0].name + ' ' + cardDeck[0].suite);
+// player1.push(cardDeck[0].name + ' ' + cardDeck[0].suite);
 
-console.log(player1);
+// console.log(player1);
 
 //Next step: Remove that card from the remaining CardDeck  pull/remove options?
 
 
 //Push card from array to player2
 
-player2.push(cardDeck[1].name + ' ' + cardDeck[1].suite);
+// player2.push(cardDeck[1].name + ' ' + cardDeck[1].suite);
 
-console.log(player2);
+// console.log(player2);
 
 //Next step: Remove that card from the remaining CardDeck pull/remove options?
 
