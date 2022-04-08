@@ -5,9 +5,9 @@ function shuffle(array) {
     while(currentIndex != 0) {
 
         let randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex--;
-    }
+        currentIndex--;      
     [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+    }
     return array;
 }
 

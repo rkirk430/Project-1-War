@@ -65,7 +65,23 @@ let cardDeck = [
     },
 ]
 
+
 //Randomly separate cards via random number (ie const randArrayP1 and randArrayP2 = new cardDeck?)
+function shuffle(cardDeck) {
+    let p1CardDeck = cardDeck.length;
+    let p1RandomIndex = undefined
+    while(p1CardDeck != 0){
+        let p1RandomIndex = Math.floor(Math.random() * p1CardDeck);
+        p1CardDeck--;
+    [cardDeck[p1CardDeck], cardDeck[p1RandomIndex]] = [cardDeck[p1RandomIndex]], cardDeck[p1CardDeck];
+    }
+    return cardDeck;
+}
+
+shuffle(cardDeck)
+console.log(cardDeck);
+
+
 class randArrayP1 {}
 
 console.log(cardDeck[0].name + ' '+ cardDeck[0].suite);  // Pulls Card
