@@ -2,4 +2,12 @@
     font-family:'Times New Roman', Times, serif;
     font-size: 50px;
     text-align: center;
+    color: green;
 }
+
+#start_game_button {
+    font-size: 50px;
+    text-align: right;
+    color: blue;
+}
+
