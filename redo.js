@@ -22,7 +22,6 @@ console.log(fullDeck)  //Logs full card deck
 console.log(typeof(fullDeck));  //Logs Object
 
 
-
 function shuffle (fullDeck) {
     for(let i = 0; i < 500; i++){
         let location1 = Math.floor((Math.random()* fullDeck.length));
@@ -36,28 +35,30 @@ function shuffle (fullDeck) {
 
 let shuffledDeck = shuffle(fullDeck);
 
+
+
 console.log(shuffledDeck); // why is this coming back as undefined
 
 console.log(typeof(shuffledDeck));  //Undefined
 
-// function shuffledDeck(cardDeck) {
-//     document.getElementById("cardDeck").innerHTML = "";
-//     for (let i = 0; i < cardDeck.length; i++) {
-//         let card = document.createElement("div");
-//         let value = document.createElement("div");
-//         let suit = document.createElement("div");
+function cardz(shuffledDeck) {
+    document.getElementById("shuffledDeck").innerHTML = "";
+    for (let i = 0; i < cardDeck.length; i++) {
+        let card = document.createElement("div");
+        let value = document.createElement("div");
+        let suit = document.createElement("div");
 
-//         card.className = "card";
-//         value.className = "value";
-//         suit.className = "suit" + cardDeck[i].Suit;
+        card.className = "card";
+        value.className = "value";
+        suit.className = "suit" + cardDeck[i].Suit;
 
-//         value.innerHTML = cardDeck[i].Value;
-//         card.appendChild(value);
-//         card.appendChild(suit);
+        value.innerHTML = cardDeck[i].Value;
+        card.appendChild(value);
+        card.appendChild(suit);
 
-//         document.getElementById("deck").appendChild(card);
-//     }
-// }
+        document.getElementById("deck").appendChild(card);
+    }
+}
 
 
 
@@ -68,3 +69,4 @@ console.log(typeof(shuffledDeck));  //Undefined
 
 
 
+//function compareCards() ** ANOTHER STEP
