@@ -68,25 +68,35 @@ function p2DrawCard(){
 
 // should i create a new variable for p2DrawCard?
 // How to access the "score" part of the array.
-let p1card = p1DrawCard();
-let p2card = p2DrawCard();
 
-p2card.score;
-console.log(p2card);
 
-const xxy = player2.score;
-console.log(xxy);
-console.log(p2DrawCard());
-console.log(player2[0].score);
+
+
+
+
 
 //Compare Cards 
 function compareCards() {
-    if(p1card.score > p2card.score);
-    return "winner";
+    if(player1.length > 0 && player2.length > 0) {
+        let p1card = p1DrawCard();
+        let p2card = p2DrawCard();
+        console.log(p1card);
+        console.log(p2card);
+        if(p1card.Score > p2card.Score) {
+            console.log('p1 winner') 
+    
+        } else if (p1card.Score < p2card.Score) {
+            console.log('p2 winner')
+        } else console.log('tie')
+    }
 }
 
+console.log(player1[0].Score);
 
-console.log(compareCards());
+
+
+document.querySelector("#start_game_button").addEventListener('click',compareCards)
+// console.log(compareCards());
 // function compareCards(p1DrawCard,p2DrawCard) {
 //     console.log(p1DrawCard.score[0],p2DrawCard.score[0])
 // }
