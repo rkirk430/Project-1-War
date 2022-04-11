@@ -42,6 +42,10 @@
     white-space: nowrap;
 }
 
+body {
+    display: flex;
+}
+
 /* Button Source: https://getcssscan.com/css-buttons-examples sxxxxxxs*/
 
 
