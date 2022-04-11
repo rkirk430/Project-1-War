@@ -1,14 +1,18 @@
 let player1 = []
 let player2 = []
 
+let warPlayer1 = []  //Empty arrays for if WAR happens
+let warPlayer2 = []  //Empty arrays for if WAR happens
+
 let suits = ['spades','diamonds','clubs','hearts'];
-let values = ['A','K','Q','J','10','9','8','7','6','5','4','3','2']
+let values = ['A','K','Q','J','10','9','8','7','6','5','4','3','2'];
+let score = [14,13,12,11,10,9,8,7,6,5,4,3,2];
 
 function getCardDeck () {
     let cardDeck = new Array();  
     for (let i = 0; i < suits.length; i++) {
        for (let x = 0; x < values.length; x++) {
-           let card = {Value: values[x], Suit: suits[i]};
+           let card = {Value: values[x], Suit: suits[i], Score: score[x]};
            cardDeck.push(card);
        } 
     }
@@ -50,20 +54,48 @@ player2 = p2ShuffledDeck;
 // console.log(player1);
 // console.log(player2);
 
-//Player 1 draws card
-function drawCard(){
+//Player 1 draws card   
+function p1DrawCard(){
     return player1.pop();
 }
 
-console.log(drawCard());
+// console.log(p1DrawCard());
 
 //Player 2 draws card
-function drawCard(){
+function p2DrawCard(){
     return player2.pop();
 }
-console.log(drawCard());
 
-//Compare Cards
+// should i create a new variable for p2DrawCard?
+// How to access the "score" part of the array.
+let p1card = p1DrawCard();
+let p2card = p2DrawCard();
+
+p2card.score;
+console.log(p2card);
+
+const xxy = player2.score;
+console.log(xxy);
+console.log(p2DrawCard());
+console.log(player2[0].score);
+
+//Compare Cards 
+function compareCards() {
+    if(p1card.score > p2card.score);
+    return "winner";
+}
+
+
+console.log(compareCards());
+// function compareCards(p1DrawCard,p2DrawCard) {
+//     console.log(p1DrawCard.score[0],p2DrawCard.score[0])
+// }
+
+// function compareCards() {
+//     let player1 = p1DrawCard();
+//     let player2 = p2DrawCard();
+//     console.log(player1.score,player2.score);
+// }
 
 
 
