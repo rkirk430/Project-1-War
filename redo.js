@@ -56,7 +56,13 @@ function drawCard(){
 }
 
 console.log(drawCard());
+
 //Player 2 draws card
+function drawCard(){
+    return player2.pop();
+}
+console.log(drawCard());
+
 //Compare Cards
 
 
