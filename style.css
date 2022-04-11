@@ -1,13 +1,17 @@
 .startstopbuttons {
     font-family:'Times New Roman', Times, serif;
-    font-size: 50px;
-    text-align: center;
-    color: green;
+    font-size: auto;
+    display: grid;
+    grid-column: 2 / 6;
+    grid-row: 2 / 6;
 }
 
-#start_game_button {
+
+
+/* #start_game_button {
     font-size: 50px;
     text-align: right;
     color: blue;
-}
+} */
+
 

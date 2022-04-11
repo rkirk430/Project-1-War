@@ -2,7 +2,7 @@ let player1 = []
 let player2 = []
 
 let suits = ['spades','diamonds','clubs','hearts'];
-let values = ['A','K','Q','J','10','9','8','7','6','5','4','3','2','1']
+let values = ['A','K','Q','J','10','9','8','7','6','5','4','3','2']
 
 function getCardDeck () {
     let cardDeck = new Array();  
@@ -15,11 +15,11 @@ function getCardDeck () {
     return cardDeck;
 }
 
-let fullDeck = getCardDeck()  // Converting function to an object
+let deck = getCardDeck()  // Converting function to an object
 
-console.log(fullDeck)  //Logs full card deck
+// console.log(fullDeck)  //Logs full card deck
 
-console.log(typeof(fullDeck));  //Logs Object
+// console.log(typeof(fullDeck));  //Logs Object
 
 
 function shuffle (fullDeck) {
@@ -31,41 +31,37 @@ function shuffle (fullDeck) {
         fullDeck[location1] = fullDeck[location2];
         fullDeck[location2] = tmp
     }
+    return fullDeck;
+    // console.log(fullDeck);
 }
 
-let shuffledDeck = shuffle(fullDeck);
+let shuffledDeck = shuffle(deck);  // returns object
 
+// console.log(typeof(shuffledDeck));  // returns object
 
+// //Split shuffled cards into player1 & player2 variables: slice method 
 
-console.log(shuffledDeck); // why is this coming back as undefined
+let p1ShuffledDeck = shuffledDeck.slice(0,26)
+player1 = p1ShuffledDeck;
 
-console.log(typeof(shuffledDeck));  //Undefined
+let p2ShuffledDeck = shuffledDeck.slice(26,52);
+player2 = p2ShuffledDeck;
 
-function cardz(shuffledDeck) {
-    document.getElementById("shuffledDeck").innerHTML = "";
-    for (let i = 0; i < cardDeck.length; i++) {
-        let card = document.createElement("div");
-        let value = document.createElement("div");
-        let suit = document.createElement("div");
-
-        card.className = "card";
-        value.className = "value";
-        suit.className = "suit" + cardDeck[i].Suit;
-
-        value.innerHTML = cardDeck[i].Value;
-        card.appendChild(value);
-        card.appendChild(suit);
-
-        document.getElementById("deck").appendChild(card);
-    }
-}
+console.log(player1);
+console.log(player2);
 
 
 
 
-// Array.from(getCardDeck);
 
-// console.log(Array);
+//push half of shuffled deck into player1 array and other half into player2 array
+
+// console.log(p1ShuffledDeck)
+
+// console.log(shuffledDeck); // why is this coming back as undefined
+
+// console.log(typeof(shuffledDeck));  //Undefined
+
 
 
 
