@@ -47,20 +47,26 @@ player1 = p1ShuffledDeck;
 let p2ShuffledDeck = shuffledDeck.slice(26,52);
 player2 = p2ShuffledDeck;
 
-console.log(player1);
-console.log(player2);
+// console.log(player1);
+// console.log(player2);
+
+//Player 1 draws card
+function drawCard(){
+    return player1.pop();
+}
+
+console.log(drawCard());
+//Player 2 draws card
+//Compare Cards
 
 
 
 
 
-//push half of shuffled deck into player1 array and other half into player2 array
 
-// console.log(p1ShuffledDeck)
 
-// console.log(shuffledDeck); // why is this coming back as undefined
 
-// console.log(typeof(shuffledDeck));  //Undefined
+
 
 
 
