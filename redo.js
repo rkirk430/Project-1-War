@@ -11,6 +11,8 @@ const p1Wrapper = document.querySelector(".p1_card_wrapper");
 const p2Wrapper = document.querySelector(".p2_card_wrapper");
 const p1CardCount = document.getElementById('p1CardCount');
 const p2CardCount = document.getElementById('p2CardCount');
+const displayWinner = document.getElementById('displayWinner');
+
 
 
 
@@ -125,15 +127,18 @@ function compareCards() {
         displayCard(p1card, p1Wrapper);
         displayCard(p2card, p2Wrapper);
         if(p1card.Score > p2card.Score) {
-            console.log('p1 winner') 
+            console.log('p1 winner')
+            displayWinner.innerText= 'Player 1 Wins!';
             player1.unshift(p2card); 
             player1.unshift(p1card);  //Think i need to do an additional step as its not calcualating correctly
         } else if (p1card.Score < p2card.Score) {
             console.log('p2 winner')
+            displayWinner.innerText= 'Player 2 Wins!';
             player2.unshift(p1card);
             player2.unshift(p2card) //Think i need to do an additional step as its not calcualating correctly
         } else {
             console.log('tie')
+            displayWinner.innerText= 'Its a Tie!';
             player2.unshift(p2card); // Pushes cards back into their respective decks
             player1.unshift(p1card);
         } 
