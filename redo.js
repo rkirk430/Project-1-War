@@ -51,6 +51,35 @@ player1 = p1ShuffledDeck;
 let p2ShuffledDeck = shuffledDeck.slice(26,52);
 player2 = p2ShuffledDeck;
 
+
+//Render the deck 
+function renderDeck(shuffledDeck)
+{
+	document.getElementById('deck').innerHTML = '';
+
+	for(var i = 0; i < deck.length; i++)
+	{
+		var card = document.createElement("deck");
+		var icon = '';
+		if (deck[i].Suit == 'hearts')
+		icon='&hearts';
+		else if (deck[i].Suit == 'spades')
+		icon = '&spades';
+		else if (deck[i].Suit == 'diamonds')
+		icon = '&diams';
+		else
+		icon = '&clubs';
+
+		card.innerHTML = deck[i].Value + '' + icon;
+		card.className = 'card';
+	document.getElementById("deck").appendChild(card);
+	}
+}
+
+console.log(renderDeck());
+
+//Rendering the deck source: https://www.thatsoftwaredude.com/content/6196/coding-a-card-deck-in-javascript
+
 // console.log(player1);
 // console.log(player2);
 
@@ -92,3 +121,4 @@ document.querySelector("#p1_draw_card").addEventListener('click',p1DrawCard)  //
 document.querySelector("#p2_draw_card").addEventListener('click',p2DrawCard)  //Click & p2 draws their card.. Not working in console.log
 document.querySelector("#start_game_button").addEventListener('click',compareCards)
 
+//document is not defined error????
