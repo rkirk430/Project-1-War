@@ -100,6 +100,7 @@ function p2DrawCard(){
     return player2.pop();
 }
 
+//Function to display cards
 let displayCard = function (card, node) {
     let currentCard = card.Suit + card.Value
     console.log(currentCard);
@@ -129,6 +130,52 @@ function compareCards() {
 }
 
 console.log(player1[0].Score);
+
+//Function to count the number of cards in a players array
+
+//Function to count p1 number of cards
+
+function p1CardCount () {
+    let sum = 0;
+    for (let i = 0; i < player1.length; i++) {
+        sum += player1[i];
+    }
+    return sum;
+}
+
+console.log(player1);
+
+
+//Function to count p2 number of cards
+
+function p2CardCount () {
+    let sum = 0;
+    for (let i = 0; i < player2.length; i++) {
+        sum += player2[i];
+    }
+    return sum;
+}
+
+console.log(player2);
+
+
+
+
+//Attempt 1
+
+// let p1CardCount = function() {
+//     for (let i = 0; i < player1.length; i++) {
+//         sum = sum + i 
+//             return sum;
+//         }
+//     }
+
+
+// console.log(p1CardCount());
+
+
+
+
 
 
 // document.querySelector("#p1_draw_card").addEventListener('click',p1DrawCard)  //Click & p1 Draws their card.. Not working in console.log
