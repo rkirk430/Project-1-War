@@ -1,3 +1,27 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+body, .startstopbuttons {
+    display: flex;
+    flex-direction: column;
+}
+body {
+    align-items: center;
+}
+
+div {
+    border: 1px black solid;
+    padding: 10px;
+    margin: 20px;
+}
+
+.row {
+    display: flex;
+}
 #start_game_button {
     background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
     border: 0;
@@ -41,12 +65,7 @@
     touch-action: manipulation;
     white-space: nowrap;
 }
-
-body {
-    display: flex;
-}
-
-/* Button Source: https://getcssscan.com/css-buttons-examples sxxxxxxsssrrrreerere*/
+/* Button Source: https://getcssscan.com/css-buttons-examples */
 
 
 
