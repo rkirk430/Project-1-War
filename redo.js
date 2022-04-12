@@ -66,13 +66,6 @@ function p2DrawCard(){
     return player2.pop();
 }
 
-// should i create a new variable for p2DrawCard?
-// How to access the "score" part of the array.
-
-
-
-
-
 
 
 //Compare Cards 
@@ -84,10 +77,10 @@ function compareCards() {
         console.log(p2card);
         if(p1card.Score > p2card.Score) {
             console.log('p1 winner') 
-            p2card.unshift(p2card);
-    
+            player1.unshift(p2card);  //Think i need to do an additional step as its not calcualating correctly
         } else if (p1card.Score < p2card.Score) {
             console.log('p2 winner')
+            player2.unshift(p1card); //Think i need to do an additional step as its not calcualating correctly
         } else console.log('tie')
     }
 }
@@ -95,29 +88,7 @@ function compareCards() {
 console.log(player1[0].Score);
 
 
-
+document.querySelector("#p1_draw_card").addEventListener('click',p1DrawCard)  //Click & p1 Draws their card.. Not working in console.log
+document.querySelector("#p2_draw_card").addEventListener('click',p2DrawCard)  //Click & p2 draws their card.. Not working in console.log
 document.querySelector("#start_game_button").addEventListener('click',compareCards)
-// console.log(compareCards());
-// function compareCards(p1DrawCard,p2DrawCard) {
-//     console.log(p1DrawCard.score[0],p2DrawCard.score[0])
-// }
 
-// function compareCards() {
-//     let player1 = p1DrawCard();
-//     let player2 = p2DrawCard();
-//     console.log(player1.score,player2.score);
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-//function compareCards() ** ANOTHER STEP
