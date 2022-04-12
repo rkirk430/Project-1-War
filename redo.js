@@ -106,10 +106,10 @@ function compareCards() {
         console.log(p2card);
         if(p1card.Score > p2card.Score) {
             console.log('p1 winner') 
-            player1.unshift(p2card);  //Think i need to do an additional step as its not calcualating correctly
+            player1.push(p2card);  //Think i need to do an additional step as its not calcualating correctly
         } else if (p1card.Score < p2card.Score) {
             console.log('p2 winner')
-            player2.unshift(p1card); //Think i need to do an additional step as its not calcualating correctly
+            player2.push(p1card); //Think i need to do an additional step as its not calcualating correctly
         } else console.log('tie')
     }
 }
