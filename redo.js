@@ -9,6 +9,10 @@ let values = ['A','K','Q','J','10','9','8','7','6','5','4','3','2'];
 let score = [14,13,12,11,10,9,8,7,6,5,4,3,2];
 const p1Wrapper = document.querySelector(".p1_card_wrapper");
 const p2Wrapper = document.querySelector(".p2_card_wrapper");
+const p1CardCount = document.getElementById('p1CardCount');
+const p2CardCount = document.getElementById('p2CardCount');
+
+
 
 
 function getCardDeck () {
@@ -80,7 +84,7 @@ function renderDeck(shuffledDeck)
     return shuffledDeck;
 }
 
-console.log(renderDeck());
+renderDeck();
 
 
 //Rendering the deck source: https://www.thatsoftwaredude.com/content/6196/coding-a-card-deck-in-javascript
@@ -113,6 +117,9 @@ let displayCard = function (card, node) {
 //Compare Cards 
 function compareCards() {
     if(player1.length > 0 && player2.length > 0) {
+        p1CardCount.innerHTML=player1.length;
+        p2CardCount.innerHTML=player2.length;
+        console.log(player1.length);
         let p1card = p1DrawCard();
         let p2card = p2DrawCard();
         displayCard(p1card, p1Wrapper);
@@ -131,37 +138,39 @@ function compareCards() {
             player1.unshift(p1card);
         } 
     }
+    // p1CardCount();
+    // p2CardCount();
 }
 
-console.log(player1[0].Score);
+// console.log(player1[0].Score);
 
 //Function to count the number of cards in a players array
 //How to invoke a function each time a click occurs
 
 //Function to count p1 number of cards
 
-function p1CardCount () {
-    let sum = 0;
-    for (let i = 0; i < player1.length; i++) {
-        sum += player1[i];
-    }
-    return sum;
-}
+// function p1CardCount () {
+//     let sum = 0;
+//     for (let i = 0; i < player1.length; i++) {
+//         sum += player1[i];
+//     } console.log(player1);
+//     return sum;
+// }
 
-console.log(player1);
+
 
 
 //Function to count p2 number of cards
 
-function p2CardCount () {
-    let sum = 0;
-    for (let i = 0; i < player2.length; i++) {
-        sum += player2[i];
-    }
-    return sum;
-}
+// function p2CardCount () {
+//     let sum = 0;
+//     for (let i = 0; i < player2.length; i++) {
+//         sum += player2[i];
+//     } console.log(player2);
+//     return sum;
+// }
 
-console.log(player2);
+
 
 
 
@@ -186,7 +195,7 @@ console.log(player2);
 // document.querySelector("#p1_draw_card").addEventListener('click',p1DrawCard)  //Click & p1 Draws their card.. Not working in console.log
 // document.querySelector("#p2_draw_card").addEventListener('click',p2DrawCard)  //Click & p2 draws their card.. Not working in console.log
 document.querySelector("#start_game_button").addEventListener('click',compareCards)
-document.querySelector("#start_game_button").addEventListener('click',p1CardCount)
-document.querySelector("#start_game_button").addEventListener('click',p2CardCount)
+// document.querySelector("#start_game_button").addEventListener('click',p1CardCount)
+// document.querySelector("#start_game_button").addEventListener('click',p2CardCount)
 
 //document is not defined error????
