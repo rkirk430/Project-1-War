@@ -10,10 +10,16 @@ h1 {
     font-size: 55px;
 }  
 
+p{
+    padding: 10px;
+    text-align: center;
+}
+
 body, .startstopbuttons {
     display: flex;
     flex-direction: column;
 }
+
 body {
     align-items: center;
     background: linear-gradient(yellow 25%, white); 
@@ -67,6 +73,7 @@ div {
     -webkit-user-select: none;
     touch-action: manipulation;
     white-space: nowrap;
+    margin: 10px
 }
 
 #reset_game_button {

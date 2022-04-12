@@ -70,14 +70,14 @@ function renderDeck(shuffledDeck)
 	{
 		var card = document.createElement("deck");
 		var icon = '';
-		if (deck[i].Suit == 'hearts')
-		icon='&hearts';
-		else if (deck[i].Suit == 'spades')
-		icon = '&spades';
-		else if (deck[i].Suit == 'diamonds')
-		icon = '&diams';
+		if (deck[i].Suit == ' hearts')
+		icon=' &hearts';
+		else if (deck[i].Suit == ' spades')
+		icon = ' &spades';
+		else if (deck[i].Suit == ' diamonds')
+		icon = ' &diams';
 		else
-		icon = '&clubs';
+		icon = ' &clubs';
 
 		card.innerHTML = deck[i].Value + '' + icon;
 		card.className = 'card';
@@ -86,7 +86,7 @@ function renderDeck(shuffledDeck)
     return shuffledDeck;
 }
 
-renderDeck();
+// renderDeck();
 
 
 //Rendering the deck source: https://www.thatsoftwaredude.com/content/6196/coding-a-card-deck-in-javascript
@@ -108,7 +108,8 @@ function p2DrawCard(){
 
 //Function to display cards
 let displayCard = function (card, node) {
-    let currentCard = card.Suit + card.Value
+    // let currentCard = card.Suit + card.Value
+    let currentCard = card.Value + ' of ' + card.Suit
     console.log(currentCard);
     let cardNode = document.createElement("p");
     cardNode.innerText = currentCard;
@@ -200,6 +201,7 @@ function compareCards() {
 // document.querySelector("#p1_draw_card").addEventListener('click',p1DrawCard)  //Click & p1 Draws their card.. Not working in console.log
 // document.querySelector("#p2_draw_card").addEventListener('click',p2DrawCard)  //Click & p2 draws their card.. Not working in console.log
 document.querySelector("#start_game_button").addEventListener('click',compareCards)
+document.querySelector("#reset_game_button").addEventListener('click', getCardDeck)
 // document.querySelector("#start_game_button").addEventListener('click',p1CardCount)
 // document.querySelector("#start_game_button").addEventListener('click',p2CardCount)
 
