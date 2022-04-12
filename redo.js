@@ -84,6 +84,7 @@ function compareCards() {
         console.log(p2card);
         if(p1card.Score > p2card.Score) {
             console.log('p1 winner') 
+            p2card.unshift(p2card);
     
         } else if (p1card.Score < p2card.Score) {
             console.log('p2 winner')
