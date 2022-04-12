@@ -125,13 +125,18 @@ function compareCards() {
             console.log('p2 winner')
             player2.unshift(p1card);
             player2.unshift(p2card) //Think i need to do an additional step as its not calcualating correctly
-        } else console.log('tie')
+        } else {
+            console.log('tie')
+            player2.unshift(p2card); // Pushes cards back into their respective decks
+            player1.unshift(p1card);
+        } 
     }
 }
 
 console.log(player1[0].Score);
 
 //Function to count the number of cards in a players array
+//How to invoke a function each time a click occurs
 
 //Function to count p1 number of cards
 
@@ -181,5 +186,7 @@ console.log(player2);
 // document.querySelector("#p1_draw_card").addEventListener('click',p1DrawCard)  //Click & p1 Draws their card.. Not working in console.log
 // document.querySelector("#p2_draw_card").addEventListener('click',p2DrawCard)  //Click & p2 draws their card.. Not working in console.log
 document.querySelector("#start_game_button").addEventListener('click',compareCards)
+document.querySelector("#start_game_button").addEventListener('click',p1CardCount)
+document.querySelector("#start_game_button").addEventListener('click',p2CardCount)
 
 //document is not defined error????
