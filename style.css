@@ -38,8 +38,15 @@ div {
 
 .drawcard {
     padding: 20px;
-    padding-bottom: 500px;
+    min-height: 480px;
+    display: flex;
 }
+
+.p1_card_wrapper, .p2_card_wrapper {
+    padding: .5em;
+    min-height: 200px;
+}
+
 #start_game_button {
     background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
     border: 0;

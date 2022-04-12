@@ -7,6 +7,9 @@ let warPlayer2 = []  //Empty arrays for if WAR happens
 let suits = ['spades','diamonds','clubs','hearts'];
 let values = ['A','K','Q','J','10','9','8','7','6','5','4','3','2'];
 let score = [14,13,12,11,10,9,8,7,6,5,4,3,2];
+const p1Wrapper = document.querySelector(".p1_card_wrapper");
+const p2Wrapper = document.querySelector(".p2_card_wrapper");
+
 
 function getCardDeck () {
     let cardDeck = new Array();  
@@ -55,7 +58,7 @@ player2 = p2ShuffledDeck;
 //Render the deck 
 function renderDeck(shuffledDeck)
 {
-	document.getElementById('deck').innerHTML = '';
+	document.getElementById("deck").innerHTML = '';
 
 	for(var i = 0; i < deck.length; i++)
 	{
@@ -74,9 +77,11 @@ function renderDeck(shuffledDeck)
 		card.className = 'card';
 	document.getElementById("deck").appendChild(card);
 	}
+    return shuffledDeck;
 }
 
 console.log(renderDeck());
+
 
 //Rendering the deck source: https://www.thatsoftwaredude.com/content/6196/coding-a-card-deck-in-javascript
 
@@ -95,21 +100,30 @@ function p2DrawCard(){
     return player2.pop();
 }
 
-
+let displayCard = function (card, node) {
+    let currentCard = card.Suit + card.Value
+    console.log(currentCard);
+    let cardNode = document.createElement("p");
+    cardNode.innerText = currentCard;
+    node.innerHTML = '';
+    node.appendChild(cardNode);
+}
 
 //Compare Cards 
 function compareCards() {
     if(player1.length > 0 && player2.length > 0) {
         let p1card = p1DrawCard();
         let p2card = p2DrawCard();
-        console.log(p1card);
-        console.log(p2card);
+        displayCard(p1card, p1Wrapper);
+        displayCard(p2card, p2Wrapper);
         if(p1card.Score > p2card.Score) {
             console.log('p1 winner') 
-            player1.push(p2card);  //Think i need to do an additional step as its not calcualating correctly
+            player1.unshift(p2card); 
+            player1.unshift(p1card);  //Think i need to do an additional step as its not calcualating correctly
         } else if (p1card.Score < p2card.Score) {
             console.log('p2 winner')
-            player2.push(p1card); //Think i need to do an additional step as its not calcualating correctly
+            player2.unshift(p1card);
+            player2.unshift(p2card) //Think i need to do an additional step as its not calcualating correctly
         } else console.log('tie')
     }
 }
@@ -117,8 +131,8 @@ function compareCards() {
 console.log(player1[0].Score);
 
 
-document.querySelector("#p1_draw_card").addEventListener('click',p1DrawCard)  //Click & p1 Draws their card.. Not working in console.log
-document.querySelector("#p2_draw_card").addEventListener('click',p2DrawCard)  //Click & p2 draws their card.. Not working in console.log
+// document.querySelector("#p1_draw_card").addEventListener('click',p1DrawCard)  //Click & p1 Draws their card.. Not working in console.log
+// document.querySelector("#p2_draw_card").addEventListener('click',p2DrawCard)  //Click & p2 draws their card.. Not working in console.log
 document.querySelector("#start_game_button").addEventListener('click',compareCards)
 
 //document is not defined error????
