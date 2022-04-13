@@ -9,6 +9,7 @@ If Player 1 Card > Player 2 Card, both cards go into Player 1’s deck & goal is
 
 Given this is a prototype I currently have a tie just being pushed back to their players respective decks 
 
+
 # Show/Discuss Code
 o	Set empty arrays for player 1 & player 2
 
@@ -20,9 +21,9 @@ o	Slice method to split up the shuffled deck into the empty player 1 and player 
 
 o	From there I used pop to pull a card out from each players array & created a function to compare the two cards using if else statements
 
-## Subheading
 
-### Link
+
+
 
 
  ## Wireframe   
@@ -34,4 +35,8 @@ o	From there I used pop to pull a card out from each players array & created a f
 
 
 
+
+
+### Link
+## Subheading
 
