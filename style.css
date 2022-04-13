@@ -24,7 +24,8 @@ h4 {
     color: whitesmoke;
     text-align: center;
     font-size: 30px;
-    /* display: inline-block; */
+    display: inline-block;
+    padding: 25px;
     /* float: left; */
 }
 
@@ -104,6 +105,7 @@ div.cards {
     font-weight: bold;
     font-size: 40px;   
 }
+
 
 #start_game_button {
     background: linear-gradient(to bottom right, #b398e6, #94c9d3);
