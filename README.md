@@ -2,7 +2,10 @@
 
 # Introduction to the Project
 Game of War. \
-Functionality -- If Player 1 Card > Player 2 Card, both cards go into Player 1’s deck & goal is to get all 52 cards
+Functionality --
+Game starts with 52 cards & deck is split evenly between the two players
+
+If Player 1 Card > Player 2 Card, both cards go into Player 1’s deck & goal is to get all 52 cards
 
 Given this is a prototype I currently have a tie just being pushed back to their players respective decks 
 
