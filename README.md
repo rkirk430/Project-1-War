@@ -43,3 +43,7 @@ function compareCards() {
             player1.unshift(p1card);
         } 
     }
+    
+  ![image](https://user-images.githubusercontent.com/41478978/163196054-4fb410a8-1aa7-462d-9d85-a404104d5232.png)
+
+
