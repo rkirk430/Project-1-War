@@ -13,6 +13,39 @@ const p1CardCount = document.getElementById('p1CardCount');
 const p2CardCount = document.getElementById('p2CardCount');
 const displayWinner = document.getElementById('displayWinner');
 
+// window.addEventListener("#reset_game_button","click" => {
+//     document.getElementById("reload").onclick = function() {
+//         location.reload(true);
+//     }
+// });
+
+// const reset = document.querySelector("#reset_game_button");
+// window.addEventListener("click").onclick => {
+//     location.reload(true);
+// })
+
+// const reset = document.querySelector("#reset_game_button");
+// reset.addEventListener('click', () => {
+    // player1();
+    // player2();
+    // getCardDeck(); 
+    // shuffle(deck);
+    // player1 = [];
+    // player2 = [];
+    
+    // p1CardCount.push.player1([]);
+    // player1.push.p1CardCount;
+    // player2.push.p2CardCount;
+    //     // return cardDeck;
+    // shuffle(); 
+    //     // return fullDeck;
+    // console.log(getCardDeck());
+    // console.log(shuffle(deck));
+    // console.log(player1);
+    // console.log(p1CardCount);
+    // console.log(p2CardCount);
+    // });
+
 
 
 
@@ -148,6 +181,7 @@ function compareCards() {
     // p2CardCount();
 }
 
+
 // console.log(player1[0].Score);
 
 //Function to count the number of cards in a players array
@@ -197,12 +231,14 @@ function compareCards() {
 
 
 
-
 // document.querySelector("#p1_draw_card").addEventListener('click',p1DrawCard)  //Click & p1 Draws their card.. Not working in console.log
 // document.querySelector("#p2_draw_card").addEventListener('click',p2DrawCard)  //Click & p2 draws their card.. Not working in console.log
-document.querySelector("#start_game_button").addEventListener('click',compareCards)
-document.querySelector("#reset_game_button").addEventListener('click', getCardDeck)
+document.querySelector("#start_game_button").addEventListener('click',compareCards);
+// document.querySelector("#reset_game_button").addEventListener('click', getCardDeck);
 // document.querySelector("#start_game_button").addEventListener('click',p1CardCount)
 // document.querySelector("#start_game_button").addEventListener('click',p2CardCount)
 
 //document is not defined error????
+
+
+

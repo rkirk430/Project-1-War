@@ -3,36 +3,56 @@
     margin: 0;
     padding: 0;
   }
+
   
 h1 {
     /* font-family: 'Beau Rivage', cursive; */
     font-family: 'Beau Rivage', cursive;
-    font-size: 55px;
+    font-size: 70px;
+    color: whitesmoke;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }  
 
-p{
-    padding: 10px;
+h3 {
+    color: whitesmoke;
     text-align: center;
+    font-size: 30px;
 }
 
-body, .startstopbuttons {
+p{
+    padding-top: 60px;
+    text-align: center;
+    color: whitesmoke;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.startstopbuttons {
     display: flex;
     flex-direction: column;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    background: linear-gradient(yellow 25%, white); 
-    background: repeating-linear-gradient(yellow 50px, white 60px);
+    /* background: linear-gradient(yellow 25%, white); 
+    background: repeating-linear-gradient(yellow 50px, white 60px); */
     font-family: 'Quicksand', sans-serif;
     /* background: linear-gradient(45deg, rgb(25, 0, 255), transparent), */
     /* repeating-linear-gradient(45deg, rgb(183,0,255) 0%, rgb(183,0,255) 5%, transparent 5%, transparent 10%), */
     /* rgb(216, 118, 255) repeating-linear-gradient((-45deg, rgba(183,0,255, 0.5) 0%, rgba(183,0,255, 0.5) 5%); */
-    height: 100vh; /* vh stands for viewport height & 100 will be taking up 100% of the screen */
+    min-height: 100vh; /* vh stands for viewport height & 100 will be taking up 100% of the screen */
+    background-color: black;
+    background-image:url(https://thumbs.gfycat.com/BriefIgnorantBlackbuck-size_restricted.gif); 
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 70%;
+
 }
 
 div {
-    border: 1px black solid;
+    border: 1px rgb(248, 246, 246) solid;
     padding: 10px;
     margin: 20px;
 }
@@ -60,7 +80,7 @@ div {
     color: #FFFFFF;
     cursor: pointer;
     display: inline-block;
-    font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 2.5;
@@ -73,7 +93,8 @@ div {
     -webkit-user-select: none;
     touch-action: manipulation;
     white-space: nowrap;
-    margin: 10px
+    margin: 20px;
+    font-size: 25px;
 }
 
 #reset_game_button {
@@ -83,7 +104,7 @@ div {
     color: #FFFFFF;
     cursor: pointer;
     display: inline-block;
-    font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 2.5;
@@ -96,6 +117,8 @@ div {
     -webkit-user-select: none;
     touch-action: manipulation;
     white-space: nowrap;
+    margin: 20px;
+    font-size: 25px;
 }
 
 #p1_draw_card {
