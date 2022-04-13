@@ -54,6 +54,9 @@ function compareCards() {
   ![image](https://user-images.githubusercontent.com/41478978/163196054-4fb410a8-1aa7-462d-9d85-a404104d5232.png)
   
   ![image](https://user-images.githubusercontent.com/41478978/163199579-842f901a-bd62-4b77-955e-5d2f147b290c.png)
+  
+  ![image](https://user-images.githubusercontent.com/41478978/163200125-90a0f077-6d9a-48f9-8762-179f0b804815.png)
+
 
 
 
