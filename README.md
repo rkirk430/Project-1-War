@@ -8,9 +8,13 @@ Given this is a prototype I currently have a tie just being pushed back to their
 
 # Show/Discuss Code
 o	Set empty arrays for player 1 & player 2
+
 o	Created constant variable arrays for suits, values and scores and integrated them into a for loop to get my card deck
+
 o	Created a function with a for loop to shuffle the deck
+
 o	Slice method to split up the shuffled deck into the empty player 1 and player 2 arrays
+
 o	From there I used pop to pull a card out from each players array & created a function to compare the two cards using if else statements
 
 ## Subheading
