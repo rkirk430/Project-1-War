@@ -21,7 +21,7 @@ h3 {
 }
 
 p{
-    padding-top: 60px;
+    padding-top: 20px;
     text-align: center;
     color: whitesmoke;
     font-family: 'Quicksand', sans-serif;
@@ -30,6 +30,7 @@ p{
 .startstopbuttons {
     display: flex;
     flex-direction: column;
+    width: 30em;
 }
 
 body {
@@ -52,7 +53,7 @@ body {
 }
 
 div {
-    border: 1px rgb(248, 246, 246) solid;
+    /* border: 1px rgb(248, 246, 246) solid; */
     padding: 10px;
     margin: 20px;
 }
@@ -73,8 +74,29 @@ div {
     min-height: 200px;
 }
 
+div.cards {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+    width: 30em;  
+}
+
+#p1CardCount {
+    font-weight: bold;
+    color: #94c9d3;
+}
+
+#p2CardCount {
+    font-weight: bold;
+    color: #94c9d3;
+}
+
+#displayWinner {
+    font-weight: bold;
+    font-size: 40px;   
+}
+
 #start_game_button {
-    background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+    background: linear-gradient(to bottom right, #b398e6, #94c9d3);
     border: 0;
     border-radius: 12px;
     color: #FFFFFF;
@@ -98,7 +120,7 @@ div {
 }
 
 #reset_game_button {
-    background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+    background: linear-gradient(to bottom right, #b398e6, #94c9d3);
     border: 0;
     border-radius: 12px;
     color: #FFFFFF;
@@ -174,5 +196,5 @@ div {
     text-align: right;
     color: blue;
 } */
-
+ 
 
