@@ -20,6 +20,14 @@ h3 {
     font-size: 30px;
 }
 
+h4 {
+    color: whitesmoke;
+    text-align: center;
+    font-size: 30px;
+    /* display: inline-block; */
+    /* float: left; */
+}
+
 p{
     padding-top: 20px;
     text-align: center;
@@ -67,6 +75,8 @@ div {
     padding: 20px;
     min-height: 480px;
     display: flex;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
 }
 
 .p1_card_wrapper, .p2_card_wrapper {
@@ -196,5 +206,4 @@ div.cards {
     text-align: right;
     color: blue;
 } */
- 
 

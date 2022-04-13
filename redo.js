@@ -95,29 +95,29 @@ player2 = p2ShuffledDeck;
 
 
 //Render the deck 
-function renderDeck(shuffledDeck)
-{
-	document.getElementById("deck").innerHTML = '';
+// function renderDeck(shuffledDeck)
+// {
+// 	document.getElementById("deck").innerHTML = '';
 
-	for(var i = 0; i < deck.length; i++)
-	{
-		var card = document.createElement("deck");
-		var icon = '';
-		if (deck[i].Suit == ' hearts')
-		icon=' &hearts';
-		else if (deck[i].Suit == ' spades')
-		icon = ' &spades';
-		else if (deck[i].Suit == ' diamonds')
-		icon = ' &diams';
-		else
-		icon = ' &clubs';
+// 	for(var i = 0; i < deck.length; i++)
+// 	{
+// 		var card = document.createElement("deck");
+// 		var icon = '';
+// 		if (deck[i].Suit == ' hearts')
+// 		icon=' &hearts';
+// 		else if (deck[i].Suit == ' spades')
+// 		icon = ' &spades';
+// 		else if (deck[i].Suit == ' diamonds')
+// 		icon = ' &diams';
+// 		else
+// 		icon = ' &clubs';
 
-		card.innerHTML = deck[i].Value + '' + icon;
-		card.className = 'card';
-	document.getElementById("deck").appendChild(card);
-	}
-    return shuffledDeck;
-}
+// 		card.innerHTML = deck[i].Value + '' + icon;
+// 		card.className = 'card';
+// 	document.getElementById("deck").appendChild(card);
+// 	}
+//     return shuffledDeck;
+// }
 
 // renderDeck();
 
